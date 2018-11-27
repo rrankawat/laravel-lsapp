@@ -3,6 +3,10 @@
 @section('content')
     <a href="/posts" class="btn btn-default">Back</a>
     <h1>{{$post->title}}</h1>
+    <div style="height:500px;">
+        <img style="width:100%;height:100%;" src="/storage/cover_images/{{$post->cover_image}}">
+    </div>
+    <br />
     <div>
         {!!$post->body!!}
     </div>
@@ -19,4 +23,5 @@
             {!!Form::close()!!}
         @endif
     @endif
+    <br /><br />
 @endsection
